@@ -27,9 +27,9 @@ class EmployeeRepositoryTest {
     @BeforeEach
     void setUp(){
         employeeEntities=EmployeeEntities.builder()
-                .Id(1L)
+                .id(1L)
                 .email("ravi@gmail.com")
-                .salarly(100L)
+                .salary(100L)
                 .build();
     }
     @Test

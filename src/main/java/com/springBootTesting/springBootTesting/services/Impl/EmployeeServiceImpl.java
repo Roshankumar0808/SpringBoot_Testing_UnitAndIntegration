@@ -12,6 +12,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 @Slf4j
 @RequiredArgsConstructor
@@ -24,6 +26,7 @@ public class EmployeeServiceImpl implements EmployeeService
     @Override
     public EmployeeDTO getEmployeeById(Long id) {
         log.info("Fetching employee with id: {}", id);
+
         EmployeeEntities employee = employeeRepository.findById(id)
                 .orElseThrow(() -> {
                     log.error("Employee not found with id: {}", id);

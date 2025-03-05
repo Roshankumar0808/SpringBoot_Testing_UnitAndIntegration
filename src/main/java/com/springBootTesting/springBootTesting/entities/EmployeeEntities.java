@@ -3,20 +3,23 @@ package com.springBootTesting.springBootTesting.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
+@Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 public class EmployeeEntities {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(unique = true)
-    private  String email;
+    private String email;
 
     private String name;
-    private Long salarly;
+
+    private Long salary;
+
 }
