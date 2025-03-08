@@ -96,8 +96,6 @@ class EmployeeControllersIntegrationTest extends AbstractIntegrationTest {
                 .bodyValue(testEmployeeDto)
                 .exchange()
                 .expectStatus().is5xxServerError();
-
-
     }
 
 

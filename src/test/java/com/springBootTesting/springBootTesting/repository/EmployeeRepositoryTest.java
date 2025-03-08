@@ -21,6 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class EmployeeRepositoryTest {
     @Autowired
     private EmployeeRepository employeeRepository;
+
     private EmployeeEntities employeeEntities;
 
 
@@ -32,6 +33,7 @@ class EmployeeRepositoryTest {
                 .salary(100L)
                 .build();
     }
+
     @Test
     void testFindByEmail_whenEmailIsValid_thenReturnEmployee() {
        //Arrange,Given
